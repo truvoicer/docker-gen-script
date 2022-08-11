@@ -1,0 +1,20 @@
+bash $(siteini) --SITE_NAME wette_de  --WEB_ROOT html --HTTP_PORT 48093 --HTTP_SSL_PORT 40453 --DB_NAME wette_de_db
+bash $(siteini) --SITE_NAME cryptonaute_fr  --WEB_ROOT html --HTTP_PORT 48094 --HTTP_SSL_PORT 40454 --DB_NAME cryptonaute_fr_db
+bash $(siteini) --SITE_NAME learn2_trade  --WEB_ROOT html --HTTP_PORT 48095 --HTTP_SSL_PORT 40455 --DB_NAME learn2_trade_db
+bash $(siteini) --SITE_NAME finaria_it  --WEB_ROOT html --HTTP_PORT 48096 --HTTP_SSL_PORT 40456 --DB_NAME safebettingsites_com_db
+bash $(siteini) --SITE_NAME actufinance_fr  --WEB_ROOT html --HTTP_PORT 48097 --HTTP_SSL_PORT 40457 --DB_NAME actufinance_fr_db
+bash $(siteini) --SITE_NAME compraracciones_com  --WEB_ROOT html --HTTP_PORT 48098 --HTTP_SSL_PORT 40458 --DB_NAME compraracciones_com_db
+bash $(siteini) --SITE_NAME aksjebloggen_com  --WEB_ROOT html --HTTP_PORT 48099 --HTTP_SSL_PORT 40459 --DB_NAME  aksjebloggen_com_db
+bash $(siteini) --SITE_NAME sijoitusrahastot_org  --WEB_ROOT html --HTTP_PORT 48100 --HTTP_SSL_PORT 40460 --DB_NAME sijoitusrahastot_org_db
+bash $(siteini) --SITE_NAME mininvestering_com  --WEB_ROOT html --HTTP_PORT 48101 --HTTP_SSL_PORT 40461 --DB_NAME mininvestering_com_db
+bash $(siteini) --SITE_NAME onlinecasinomaxi_de  --WEB_ROOT html --HTTP_PORT 48102 --HTTP_SSL_PORT 40462 --DB_NAME onlinecasinomaxi_de_db
+bash $(siteini) --SITE_NAME basketballinsiders_com  --WEB_ROOT html --HTTP_PORT 48103 --HTTP_SSL_PORT 40463 --DB_NAME basketballinsiders_com_db
+bash $(siteini) --SITE_NAME insidebitcoins_com  --WEB_ROOT html --HTTP_PORT 48104 --HTTP_SSL_PORT 40464 --DB_NAME insidebitcoins_com_db
+bash $(siteini) --SITE_NAME invest_rating_ru  --WEB_ROOT html --HTTP_PORT 48105 --HTTP_SSL_PORT 40465 --DB_NAME invest_rating_ru_db
+
+# Not in WP-user-create
+bash $(siteini) --SITE_NAME safebettingsites_com  --WEB_ROOT html --HTTP_PORT 48106 --HTTP_SSL_PORT 40466 --DB_NAME safebettingsites_com_db
+
+Start: 14.01
+
+forexcrunch - 48091
