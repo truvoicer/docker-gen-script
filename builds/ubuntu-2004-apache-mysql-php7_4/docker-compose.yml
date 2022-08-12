@@ -13,6 +13,7 @@ services:
     volumes:
       - ./<WEB_ROOT>:/var/www/html
       - ./config/php/php-dev.ini:/etc/php/7.4/apache2/php.ini
+      <PLUGIN_MAPS>
     networks:
       - <NETWORK>
 volumes:

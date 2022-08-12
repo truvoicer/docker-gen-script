@@ -85,6 +85,12 @@ define( 'WP_DEBUG', false );
 
 define( 'WP_DEBUG_LOG', false );
 
+// define( 'WP_ALLOW_MULTISITE', true );
+// define( 'SUBDOMAIN_INSTALL', false );
+// define( 'DOMAIN_CURRENT_SITE', 'localhost' );
+// define( 'PATH_CURRENT_SITE', '/' );
+// define( 'SITE_ID', 1 );
+// define( 'BLOG_ID', 1 );
 
 /* That's all, stop editing! Happy publishing. */
 

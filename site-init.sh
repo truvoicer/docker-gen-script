@@ -1,5 +1,7 @@
 #!/bin/bash
 ROOT_PATH="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && pwd 2> /dev/null; )";
+WP_DIR_PATH="$ROOT_PATH/wordpress"
+WP_PLUGINS_DIR_PATH="$WP_DIR_PATH/plugins"
 SCRIPTS_DIR_PATH="$ROOT_PATH/scripts"
 BUILDS_DIR_PATH="$ROOT_PATH/builds"
 BUILD_PREFIX="ubuntu-2004-apache-mysql-php"
@@ -25,6 +27,7 @@ site_data=(
   [DB_ROOT_PASSWORD]=${DB_ROOT_PASSWORD:-password}
   [DB_PASSWORD]=${DB_PASSWORD:-password}
   [DB_CONTAINER]=${DB_CONTAINER:-sites_db}
+  [IMPORT_PLUGINS]=${IMPORT_PLUGINS:-false}
 )
 
 env_data=(
@@ -40,10 +43,22 @@ placeholder_files=(
 )
 
 
+function buildPluginMappings {
+  plugin_dirs=$(find $WP_PLUGINS_DIR_PATH -maxdepth 1 -type d)
+  echo "$plugin_dirs"
+}
+
 function findReplaceForMac {
   query="<$1>"
   replace="$2"
   path="$3"
+
+  if [ "${site_data[IMPORT_PLUGINS]}" == false ]; then
+    return
+  else
+    # replace=$(buildPluginMappings)
+    buildPluginMappings
+  fi
   sed -i '' -e "s/$query/$(escapeString $replace)/g" "$path"
 }
 
